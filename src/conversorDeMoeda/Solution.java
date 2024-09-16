@@ -13,10 +13,10 @@ public static void main(String[] args) {
     double payment = scanner.nextDouble();
     scanner.close();
 
+    // Recebendo as informações
     NumberFormat usformat = NumberFormat.getCurrencyInstance(Locale.US);
     String us = usformat.format(payment);
 
-    // currency fo india which not defined
 
     Locale indialocale = new Locale("en", "IN");
     NumberFormat indiaformatter = NumberFormat.getCurrencyInstance(indialocale);
@@ -29,7 +29,7 @@ public static void main(String[] args) {
     NumberFormat franceformatter = NumberFormat.getCurrencyInstance(Locale.FRANCE);
     String france = franceformatter.format(payment);
 
-
+    // Saida de dados
     System.out.println("US: " + us);
     System.out.println("India: " + india);
     System.out.println("China: " + china);
